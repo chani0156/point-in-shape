@@ -4,7 +4,7 @@ const { isPointInRectangle, isPointInCircle } = require('../utils/geometry');
 
 const router = express.Router();
 
-// Endpoint to check if a point is inside a rectangle
+
 router.post('/rectangle', (req, res) => {
     const { point, rectangle } = req.body;
     if (!point || !rectangle) {
@@ -14,7 +14,7 @@ router.post('/rectangle', (req, res) => {
     res.json({ inside: result });
 });
 
-// Endpoint to check if a point is inside a circle
+
 router.post('/circle', (req, res) => {
     const { point, circle } = req.body;
     if (!point || !circle) {
